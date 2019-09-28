@@ -1,7 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse
 from .models import Job
 
 # Create your views here.
-def home(request):
+def index(request):
     jobs = Job.objects
     return render(request, 'jobs/home.html', {'jobs':jobs})
