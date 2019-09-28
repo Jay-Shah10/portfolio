@@ -18,13 +18,12 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-from jobs import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     
     # app's home page.
-    path('', views.home, name='home'),
+    path('', include('jobs.urls')),
     path('blog/', include('blog.urls')),
 ]
 
