@@ -6,4 +6,3 @@ from .models import Blog
 def showBlogs(request):
     blogs = Blog.objects
     return render(request, 'blog/showblogs.html', {'blogs': blogs})
-    
